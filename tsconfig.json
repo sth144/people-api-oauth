@@ -18,11 +18,6 @@
         "rootDir": "src",
         "baseUrl": "src",
         "paths": {
-            "@controllers/*": ["controllers/*"],
-            "@db/*": ["db/*"],
-            "@lib/*": ["lib/*"],
-            "@models/*": ["models/*"],
-            "@routes/*": ["routes/*"],
             "@base/*": ["./*"]
         },
         "outDir": "dist",

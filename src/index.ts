@@ -29,9 +29,12 @@ require("module-alias/register");
 const config = require("dotenv").config();
 import { App } from "@base/app";
 
+// TODO: where should these constants go?
+const token_url: string = "";
 // TODO: determine urls
-const url: string = "";
-const url_redirected: string = ""; 
+const api_url: string = "";
+const api_url_redirected: string = ""; 
+const app_url: string = "";
 // TODO: determine how to set client id
 const client_id: string = "";
 // TODO: determine how to set state
@@ -39,6 +42,9 @@ const state: string = "";
 // TODO: determine what scope should be
 const scope: string = "email";
 
+// TODO: client secret? how to generate
+// TODO: authorization token? how to handle
+// TODO: access code? how to handle
 
 /**
  * entry point

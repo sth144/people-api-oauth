@@ -19,11 +19,6 @@
   },
   "homepage": "https://github.com/sth144/people-api-oauth#readme",
   "_moduleAliases": {
-    "@controllers": "dist/controllers",
-    "@db": "dist/db",
-    "@lib": "dist/lib",
-    "@models": "dist/models",
-    "@routes": "dist/routes",
     "@base": "dist"
   },
   "dependencies": {
