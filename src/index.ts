@@ -27,10 +27,7 @@
 require("module-alias/register");
 // TODO: can I use dotenv on gcloud?
 const config = require("dotenv").config();
-
-import * as express from "express";
-import * as handlebars from "express-handlebars";
-import * as bodyParser from "body-parser";
+import { App } from "@base/app";
 
 // TODO: determine urls
 const url: string = "";
@@ -42,21 +39,9 @@ const state: string = "";
 // TODO: determine what scope should be
 const scope: string = "email";
 
-const app = express();
-const hbs = handlebars.create({ defaultLayout: "main" });
 
-app.use(express.static(__dirname + "/public"));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
-app.set("port", (process.env.PORT || 8080));
-app.engine("handlebars", hbs.engine);
-app.set("view engine", "handlebars");
-
-app.listen(app.get("port"), () => {
-    console.log("App is listening on port", app.get("port"));
-});
-
-// TODO: implement controller 
-app.get("/", (req, res) => {
-    res.render("index", res);
-});
+/**
+ * entry point
+ */
+const app = new App();
+app.start();
