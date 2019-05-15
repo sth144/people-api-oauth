@@ -30,15 +30,22 @@ const config = require("dotenv").config();
 import { App } from "@base/app";
 
 // TODO: where should these constants go?
-const token_url: string = "";
 // TODO: determine urls
-const api_url: string = "";
+const api_url: string = "https://people.googleapis.com/v1/people/me?personFields=names,emailAddresses";
 const api_url_redirected: string = ""; 
-const app_url: string = "";
-// TODO: determine how to set client id
-const client_id: string = "";
+let app_url: string;
+if (process.env.GOOGLE_CLOUD_PROJECT == "hindss-assign6") {
+    app_url = "https://hindss-assign6.appspot.com";
+} else {
+    app_url = "http://localhost:8080" 
+}
+// TODO: store these in .env?
+const client_id: string = "663515894259-va2afmv42ejal2iaqq7hoqoi32669r8r.apps.googleusercontent.com";
+const client_secret: string = "dup82UXi4un2z9VnfaBQ1LzB";
 // TODO: determine how to set state
 const state: string = "";
+// TODO: where is token handled?
+const token: string = "";
 // TODO: determine what scope should be
 const scope: string = "email";
 
