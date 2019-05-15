@@ -1,0 +1,41 @@
+{
+  "name": "assignment6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "deploy": "gcloud app deploy",
+    "start": "node dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sth144/people-api-oauth.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sth144/people-api-oauth/issues"
+  },
+  "homepage": "https://github.com/sth144/people-api-oauth#readme",
+  "_moduleAliases": {
+    "@controllers": "dist/controllers",
+    "@db": "dist/db",
+    "@lib": "dist/lib",
+    "@models": "dist/models",
+    "@routes": "dist/routes",
+    "@base": "dist"
+  },
+  "dependencies": {
+    "@google-cloud/datastore": "^3.1.2",
+    "@types/node": "^11.13.5",
+    "body-parser": "^1.18.3",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "module-alias": "^2.2.0",
+    "next": "^8.1.0"
+  },
+  "devDependencies": {
+    "@types/core-js": "^2.5.0"
+  }
+}
