@@ -25,33 +25,12 @@
 //      will display their name.
 
 require("module-alias/register");
-// TODO: can I use dotenv on gcloud?
-const config = require("dotenv").config();
 import { App } from "@base/app";
 
-// TODO: where should these constants go?
-// TODO: determine urls
-const api_url: string = "https://people.googleapis.com/v1/people/me?personFields=names,emailAddresses";
-const api_url_redirected: string = ""; 
-let app_url: string;
-if (process.env.GOOGLE_CLOUD_PROJECT == "hindss-assign6") {
-    app_url = "https://hindss-assign6.appspot.com";
-} else {
-    app_url = "http://localhost:8080" 
-}
-// TODO: store these in .env?
-const client_id: string = "663515894259-va2afmv42ejal2iaqq7hoqoi32669r8r.apps.googleusercontent.com";
-const client_secret: string = "dup82UXi4un2z9VnfaBQ1LzB";
-// TODO: determine how to set state
-const state: string = "";
-// TODO: where is token handled?
-const token: string = "";
-// TODO: determine what scope should be
-const scope: string = "email";
-
-// TODO: client secret? how to generate
-// TODO: authorization token? how to handle
 // TODO: access code? how to handle
+// TODO: authorization token? how to handle
+//      - if the usser approves at consent screen, Google gives short lived access token
+const token: string = "";
 
 /**
  * entry point

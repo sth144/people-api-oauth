@@ -13,7 +13,6 @@ export class App {
 
         this._app.use(bodyParser.json());
         this._app.use("/", router);
-        this._app.use(express.static(__dirname + "/public"));
         this._app.use(bodyParser.json());
         this._app.use(bodyParser.urlencoded({extended: false}));
         this._app.set("port", (process.env.PORT || 8080));
