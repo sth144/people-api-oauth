@@ -88,6 +88,7 @@ export class OauthController {
             const context: Partial<IPersonInfo> = {};
             context.firstname = person.names[0].givenName;
             context.lastname = person.names[0].familyName;
+            context.state = this.state;
             res.render("info", context);
         });
     }
