@@ -26,14 +26,8 @@
 
 require("module-alias/register");
 import { App } from "@base/app";
-
-// TODO: access code? how to handle
-// TODO: authorization token? how to handle
-//      - if the usser approves at consent screen, Google gives short lived access token
-const token: string = "";
-
 /**
- * entry point
+ * entry point for the oauth app
  */
 const app = new App();
 app.start();
